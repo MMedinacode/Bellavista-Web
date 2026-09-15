@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cafetería Bellavista — de salado a dulce, en Conchalí</title>
+<meta name="description" content="Cafetería Bellavista, Los Acacios 5481, Conchalí. Churrasco italiano, copas de helado, waffles y tortas. Wifi, salón climatizado, terraza y estacionamiento. 4,6 ★ con 22 reseñas.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#AF141C">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23AF141C'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-family='Georgia,serif' font-size='34' fill='%23FBF7F0'%3EB%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CL">
+<meta property="og:site_name" content="Cafetería Bellavista">
+<meta property="og:title" content="Cafetería Bellavista — Conchalí">
+<meta property="og:description" content="De salado a dulce: churrasco italiano, copas de helado, waffles y tortas. Con wifi, salón climatizado, terraza y estacionamiento.">
+<meta property="og:url" content="https://mmedinacode.github.io/Bellavista-Web/">
+<meta property="og:image" content="https://mmedinacode.github.io/Bellavista-Web/fotos/hero-churrasco-italiano.jpg">
+<meta property="og:image:alt" content="Churrasco italiano servido en Cafetería Bellavista, Conchalí">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Overpass:wght@300;400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Loader: el mantel de cuadros vichy armándose. -->
+<div id="loader" class="loader" aria-hidden="true">
+  <div class="loader-mantel" aria-hidden="true"></div>
+  <p class="loader-txt">Bellavista</p>
+</div>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="head">
+  <div class="head-in">
+    <a class="brand" href="#inicio" data-tab="inicio" aria-label="Cafetería Bellavista, ir al inicio">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-txt"><strong>Bellavista</strong><em>Cafetería · Conchalí</em></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav" id="nav" aria-label="Secciones">
+      <ul class="nav-links">
+        <li><a href="#inicio"    data-tab="inicio" class="on">Inicio</a></li>
+        <li><a href="#nosotros"  data-tab="nosotros">Nosotros</a></li>
+        <li><a href="#carta"     data-tab="carta">Carta</a></li>
+        <li><a href="#resenas"   data-tab="resenas">Reseñas</a></li>
+        <li><a href="#redes"     data-tab="redes">Redes</a></li>
+        <li><a href="#visitanos" data-tab="visitanos">Visítanos</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ══════════════ INICIO ══════════════ -->
+<section class="tab-panel on" data-tab-panel="inicio" id="inicio">
+  <div class="hero">
+    <div class="hero-txt">
+      <p class="eyebrow">Los Acacios 5481 · Conchalí</p>
+      <h1>De salado<br><em>a dulce.</em></h1>
+      <p class="hero-lead">
+        Churrasco italiano, chorrillana, copas de helado, waffles y tortas
+        por porción. Con <strong>wifi, salón climatizado, terraza y
+        estacionamiento amplio</strong>.
+      </p>
+
+      <ul class="sellos" aria-label="Lo que tiene el local">
+        <li>Wifi</li>
+        <li>Climatizado</li>
+        <li>Terraza</li>
+        <li>Estacionamiento</li>
+      </ul>
+
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#carta" data-tab="carta">Ver la carta</a>
+        <a class="btn btn-ghost" href="#resenas" data-tab="resenas">Leer las reseñas</a>
+      </div>
+      <p class="hero-open">
+        <span class="dot" id="statusDot" aria-hidden="true"></span>
+        <span data-horario-estado>De lunes a viernes, 13:00 a 21:00</span>
+      </p>
+    </div>
+    <figure class="hero-img">
+      <img src="fotos/hero-churrasco-italiano.jpg" alt="Churrasco italiano servido sobre mantel rojo en Cafetería Bellavista" fetchpriority="high" decoding="async">
+      <figcaption class="hero-cap">Churrasco italiano</figcaption>
+    </figure>
+  </div>
+
+  <div class="wrap">
+    <div class="cifras reveal stagger">
+      <div><b data-contar>4,6</b><span>★ en Google</span></div>
+      <div><b data-contar>22</b><span>reseñas</span></div>
+      <div><b>13:00</b><span>abrimos</span></div>
+      <div><b>21:00</b><span>cerramos</span></div>
+    </div>
+
+    <!-- El horario raro es el gancho: va grande y arriba, no escondido. -->
+    <div class="avisohorario reveal">
+      <p><strong>Ojo con el horario:</strong> abrimos <b>a la una de la
+      tarde</b>, no en la mañana. <b>Cerramos el sábado</b> — y el domingo
+      sí abrimos, de 10:00 a 18:00.</p>
+      <a href="#visitanos" data-tab="visitanos" class="lnk">Ver la semana completa →</a>
+    </div>
+
+    <div class="tri reveal stagger">
+      <article class="tri-card">
+        <h3>Churrasco italiano</h3>
+        <p>Es el <strong>destacado nº1</strong> de su carta en Google. Y el
+           nº2 es el pisco sour: acá se viene a comer y a quedarse.</p>
+        <a href="#carta" data-tab="carta" class="lnk">Ver la carta →</a>
+      </article>
+      <article class="tri-card">
+        <h3>Postres del porte de la mesa</h3>
+        <p>Copas de helado con barquillos, <strong>waffles con M&amp;M's</strong>,
+           galletas gigantes y torta selva negra.</p>
+        <a href="#carta" data-tab="carta" class="lnk">Ver los dulces →</a>
+      </article>
+      <article class="tri-card">
+        <h3>Con todo para quedarse</h3>
+        <p>“Muy muy amplio estacionamiento, <strong>zona wifi, salón
+           climatizado</strong>, también terraza.”</p>
+        <a href="#visitanos" data-tab="visitanos" class="lnk">Cómo llegar →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ NOSOTROS ══════════════ -->
+<section class="tab-panel" data-tab-panel="nosotros" id="nosotros">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Nosotros</p>
+      <h2>Una cafetería<br>de barrio, entera</h2>
+      <p class="sec-lead">
+        Manteles rojos, tazas de loza y una pizarra escrita a mano.
+      </p>
+    </header>
+
+    <div class="split reveal">
+      <figure class="split-img">
+        <img src="fotos/malteadas-tazas.jpg" alt="Dos malteadas y dos tazas de loza turquesa sobre mantel rojo" loading="lazy" decoding="async">
+        <figcaption>Malteadas y tazas de loza</figcaption>
+      </figure>
+      <div class="split-txt">
+        <h3>“Amplia variedad, desde salado a dulce”</h3>
+        <blockquote class="cita">
+          “Amplia variedad, desde salado a dulce. El personal es muy amable,
+          el espacio limpio y servicio rápido 10/10.”
+          <cite>Martina Mena S.</cite>
+        </blockquote>
+        <p>
+          En la misma mesa cabe un <strong>churrasco italiano</strong>, una
+          chorrillana con huevo, una copa de helado y una malteada. No es
+          una cafetería de especialidad ni una heladería: es las dos cosas,
+          en un local de barrio.
+        </p>
+      </div>
+    </div>
+
+    <div class="split split-rev reveal">
+      <figure class="split-img">
+        <img src="fotos/malteada-pizarra.jpg" alt="Malteada frente a la pizarra escrita a mano del local" loading="lazy" decoding="async">
+        <figcaption>La pizarra, escrita a mano</figcaption>
+      </figure>
+      <div class="split-txt">
+        <h3>Y un lugar donde sentarse de verdad</h3>
+        <p>
+          Una clienta lo enumeró mejor de lo que podríamos nosotros:
+          <strong>“Muy muy amplio estacionamiento, zona wifi, salón
+          climatizado, también terraza”</strong>. Cuatro cosas que no
+          aparecen en su ficha de Google, y que son justo lo que uno quiere
+          saber antes de ir.
+        </p>
+        <p>
+          Otro cliente lo resume en una línea: <em>“yo personalmente vengo
+          los viernes lo paso super bien”</em>.
+        </p>
+        <a href="#visitanos" data-tab="visitanos" class="lnk">Ver horario y mapa →</a>
+      </div>
+    </div>
+
+    <div class="gal reveal stagger">
+      <figure><img src="fotos/copa-helado.jpg" alt="Copa de helado de tres sabores con barquillos" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/waffle.jpg" alt="Waffle con helado, chocolate y M&M's" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/vitrina-tortas.jpg" alt="Vitrina con torta selva negra y mil hojas" loading="lazy" decoding="async"></figure>
+      <figure><img src="fotos/chorrillana.jpg" alt="Chorrillana con huevo frito" loading="lazy" decoding="async"></figure>
+    </div>
+    <p class="note">Todas las fotos son del propio local, de su ficha de Google Maps.</p>
+  </div>
+</section>
+
+<!-- ══════════════ CARTA ══════════════ -->
+<section class="tab-panel" data-tab-panel="carta" id="carta">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Carta</p>
+      <h2>Lo que hay</h2>
+      <p class="sec-lead">
+        Productos reales, confirmados en su ficha y en sus propias fotos.
+      </p>
+    </header>
+
+    <div class="aviso reveal">
+      <strong>Sobre los precios:</strong> Bellavista no publica ninguno —
+      ni carta fotografiada, ni menú digital, ni redes. Así que acá todo va
+      sin precio, en vez de con uno inventado. <b>Es lo primero que ganaría
+      con una página.</b>
+    </div>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Salado</h3>
+        <span class="carta-bloque-n">3 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/hero-churrasco-italiano.jpg" alt="Churrasco italiano" loading="lazy" decoding="async">
+          <div><h4>Churrasco italiano</h4><p>El destacado nº1 de su carta en Google.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/churrasco-tabla.jpg" alt="Sándwich en pan francés servido en tabla" loading="lazy" decoding="async">
+          <div><h4>Sándwich en pan francés</h4><p>Con tomate y lechuga, servido en tabla de madera.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/chorrillana.jpg" alt="Chorrillana con huevo" loading="lazy" decoding="async">
+          <div><h4>Chorrillana</h4><p>Con huevo frito encima. Vista en sus propias fotos.</p></div>
+          <span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Heladería</h3>
+        <span class="carta-bloque-n">categoría propia en su ficha</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/copa-helado.jpg" alt="Copa de helado con barquillos" loading="lazy" decoding="async">
+          <div><h4>Copas de helado</h4><p>Tres sabores, crema y barquillos. Google les da categoría de fotos propia.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/waffle.jpg" alt="Waffle con helado y M&M's" loading="lazy" decoding="async">
+          <div><h4>Waffle con helado</h4><p>Con salsa de chocolate, crema y M&amp;M's encima.</p></div>
+          <span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Pastelería</h3>
+        <span class="carta-bloque-n">4 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/vitrina-tortas.jpg" alt="Torta selva negra en vitrina" loading="lazy" decoding="async">
+          <div><h4>Torta selva negra</h4><p>Por porción, vista en su vitrina.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Mil hojas</h4><p>Por porción, vista en su vitrina.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/galletas.jpg" alt="Galletas grandes de chocolate y pistacho" loading="lazy" decoding="async">
+          <div><h4>Galletas grandes</h4><p>De chips de chocolate y de pistacho. Del porte de la mano.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item">
+          <img src="fotos/berlin-manjar.jpg" alt="Masa dulce con crema y manjar" loading="lazy" decoding="async">
+          <div><h4>Masas dulces</h4><p>Con crema y manjar por encima.</p></div>
+          <span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <section class="carta-bloque reveal">
+      <header class="carta-bloque-head">
+        <h3>Para tomar</h3>
+        <span class="carta-bloque-n">3 opciones</span>
+      </header>
+      <div class="menu reveal stagger">
+        <article class="menu-item">
+          <img src="fotos/malteadas-tazas.jpg" alt="Malteadas servidas en copa alta" loading="lazy" decoding="async">
+          <div><h4>Malteadas</h4><p>En copa alta. Salen en dos de sus fotos.</p></div>
+          <span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Café</h4><p>Servido en taza de loza turquesa, como se ve en sus fotos.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Pisco sour</h4><p>El destacado nº2 de su carta en Google.</p></div><span class="price">Consultar</span></article>
+      </div>
+    </section>
+
+    <p class="note">
+      Productos confirmados en su ficha de Google y en sus propias fotos.
+      Conviene confirmar precios y disponibilidad en el local.
+    </p>
+    <!--
+      ⚠️ PLACEHOLDER MARCADO — NINGÚN PRECIO CONSTA.
+      Bellavista no publica carta con valores en ninguna parte: ni impresa
+      fotografiada en su ficha, ni digital, ni redes. Todo va "Consultar"
+      a propósito.
+    -->
+  </div>
+</section>
+
+<!-- ══════════════ RESEÑAS ══════════════ -->
+<section class="tab-panel" data-tab-panel="resenas" id="resenas">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Reseñas</p>
+      <h2>4,6 ★ · 22 reseñas</h2>
+      <p class="sec-lead">Reales, copiadas tal cual de su ficha de Google Maps.</p>
+    </header>
+
+    <div class="revs reveal stagger">
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Amplia variedad, desde salado a dulce. El personal es muy amable, el espacio limpio y servicio rápido 10/10</p>
+        <footer><b>Martina Mena S.</b><span>Reseña en Google</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Muy muy amplio estacionamiento, zona wifi, salón climatizado,,, también terraza</p>
+        <footer><b>angelica cerda</b><span>Reseña en Google</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p class="stars" aria-label="5 de 5 estrellas">★★★★★</p>
+        <p>Buen servicio lugar agradable yo personalmente vengo los viernes lo paso super bien</p>
+        <footer><b>Cristian elias Carrasco</b><span>Reseña en Google</span></footer>
+      </blockquote>
+    </div>
+
+    <div class="rev-cta reveal">
+      <a class="btn btn-solid" href="https://search.google.com/local/reviews?placeid=ChIJg8FfwujGYpYRFnbSevfOXRM" target="_blank" rel="noopener">Leer las 22 reseñas</a>
+      <a class="btn btn-ghost" href="https://search.google.com/local/writereview?placeid=ChIJg8FfwujGYpYRFnbSevfOXRM" target="_blank" rel="noopener">Dejar una reseña</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ REDES ══════════════ -->
+<section class="tab-panel" data-tab-panel="redes" id="redes">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Redes</p>
+      <h2>Dónde encontrarnos</h2>
+      <p class="sec-lead">Sólo lo verificado. Ningún perfil inventado.</p>
+    </header>
+
+    <div class="redes">
+      <article class="red-card reveal">
+        <a class="red-card-head" href="https://www.google.com/maps/search/?api=1&query=Cafeter%C3%ADa%20Bellavista&query_place_id=ChIJg8FfwujGYpYRFnbSevfOXRM" target="_blank" rel="noopener">
+          <span class="red-logo red-logo-map"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C7.31 0 3.5 3.81 3.5 8.5c0 6.38 8.5 15.5 8.5 15.5s8.5-9.12 8.5-15.5C20.5 3.81 16.69 0 12 0zm0 11.6a3.1 3.1 0 110-6.2 3.1 3.1 0 010 6.2z"/></svg></span>
+          <span class="red-card-txt">
+            <b>Ficha en Google Maps</b>
+            <em>4,6 ★ · 22 reseñas</em>
+          </span>
+          <span class="red-card-cta">Abrir →</span>
+        </a>
+        <a class="red-grid" href="https://www.google.com/maps/search/?api=1&query=Cafeter%C3%ADa%20Bellavista&query_place_id=ChIJg8FfwujGYpYRFnbSevfOXRM" target="_blank" rel="noopener"
+           data-cta="Ver la ficha" aria-label="Abrir la ficha de Cafetería Bellavista en Google Maps">
+          <figure><img src="fotos/copa-helado.jpg" alt="Copa de helado" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/waffle.jpg" alt="Waffle con M&M's" loading="lazy" decoding="async"></figure>
+          <figure><img src="fotos/galletas.jpg" alt="Galletas grandes" loading="lazy" decoding="async"></figure>
+        </a>
+        <p class="red-pie">Hoy es su <b>único canal en internet</b>.</p>
+      </article>
+
+      <!--
+        ⚠️ NO TIENEN NINGUNA RED SOCIAL PUBLICADA NI TELÉFONO.
+        No se buscó Instagram ni Facebook en profundidad: su ficha no
+        enlaza ninguno y no hay nombre de marca suficientemente único para
+        buscar sin riesgo de confundirse con otro "Bellavista". Queda
+        pendiente en el dossier. NO se inventa ningún perfil.
+      -->
+      <article class="red-card red-card-falta reveal">
+        <div class="red-card-head red-card-head-off">
+          <span class="red-logo red-logo-off" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 7h2v6h-2V7zm0 8h2v2h-2v-2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></span>
+          <span class="red-card-txt">
+            <b>Sin teléfono ni redes</b>
+            <em>Nada publicado en su ficha</em>
+          </span>
+        </div>
+        <p class="red-pie">
+          Declaran <b>entrega a domicilio</b>, pero no dicen por dónde se
+          pide. Un número en la ficha resolvería las dos cosas.
+        </p>
+      </article>
+    </div>
+
+    <div class="aviso aviso-ojo reveal">
+      <strong>Lo más urgente que les falta:</strong> su ficha de Google
+      <b>no tiene teléfono</b>, y aun así declara <b>entrega a domicilio</b>.
+      Hoy, alguien que quiera pedir a domicilio <b>no tiene cómo</b>. Con un
+      número publicado y esta página, el problema se acaba.
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ VISÍTANOS ══════════════ -->
+<section class="tab-panel" data-tab-panel="visitanos" id="visitanos">
+  <div class="wrap">
+    <header class="sec-head reveal">
+      <p class="eyebrow">Visítanos</p>
+      <h2>Los Acacios 5481</h2>
+    </header>
+
+    <div class="visit reveal">
+      <div class="visit-info">
+        <div class="vblock">
+          <h3>Dirección</h3>
+          <p>Los Acacios 5481<br>Conchalí, Región Metropolitana</p>
+          <p class="sub">Plus Code J8C6+RJ · con estacionamiento amplio</p>
+        </div>
+
+        <div class="vblock">
+          <h3>Horario</h3>
+          <p class="estado"><span class="dot" aria-hidden="true"></span><span data-horario-estado>De lunes a viernes, 13:00 a 21:00</span></p>
+          <ul class="horario horario-semana" id="horario-lista" data-horario-semana>
+            <li data-dia="1"><span>Lunes</span><b>13:00 – 21:00</b></li>
+            <li data-dia="2"><span>Martes</span><b>13:00 – 21:00</b></li>
+            <li data-dia="3"><span>Miércoles</span><b>13:00 – 21:00</b></li>
+            <li data-dia="4"><span>Jueves</span><b>13:00 – 21:00</b></li>
+            <li data-dia="5"><span>Viernes</span><b>13:00 – 21:00</b></li>
+            <li data-dia="6"><span>Sábado</span><b class="cerrado">Cerrado</b></li>
+            <li data-dia="0"><span>Domingo</span><b>10:00 – 18:00</b></li>
+          </ul>
+          <p class="sub">
+            <b>El domingo es el único día que abrimos en la mañana</b>, y el
+            sábado es el único que cerramos. Según su ficha de Google,
+            consultada el 15-09-2026.
+          </p>
+        </div>
+
+        <div class="vblock">
+          <h3>Lo que hay en el local</h3>
+          <ul class="vpedir">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21l-3.5-4.2a5.5 5.5 0 017 0L12 21zM4.5 12.5a11 11 0 0115 0l-1.8 2.1a8.3 8.3 0 00-11.4 0l-1.8-2.1zM1 8.7a16.5 16.5 0 0122 0l-1.8 2.1a13.8 13.8 0 00-18.4 0L1 8.7z"/></svg> Zona wifi</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 2h2v4.6l2.3-2.3 1.4 1.4L13 9.4v5.2l4.5-2.6.5-3.1 1.9.3-.5 2.4 4 2.3-1 1.7-4-2.3-4.5 2.6 4.5 2.6 4-2.3 1 1.7-4 2.3.5 2.4-1.9.3-.5-3.1L13 17.4V22h-2v-4.6l-2.3 2.3-1.4-1.4L11 14.6V9.4L6.5 12l-.5 3.1-1.9-.3.5-2.4-4-2.3 1-1.7 4 2.3L10 8.1 5.5 5.5l-4 2.3-1-1.7 4-2.3L4 1.4l1.9-.3.5 3.1L11 6.6V2z"/></svg> Salón climatizado</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 7h-2v11h-5v-6h-4v6H5V9H3l9-7z"/></svg> Terraza</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v9H3V6zm12 3h3.5L21 12.5V15h-6V9zM6.5 20a2 2 0 110-4 2 2 0 010 4zm11 0a2 2 0 110-4 2 2 0 010 4z"/></svg> Entrega a domicilio</li>
+          </ul>
+          <p class="sub">
+            Las tres primeras las enumera una clienta en su reseña de
+            Google. La entrega a domicilio la declara su ficha — aunque
+            <b>no publican teléfono</b> para pedirla.
+          </p>
+        </div>
+
+        <div class="vblock vblock-cta">
+          <a class="btn btn-solid" href="https://www.google.com/maps/dir/?api=1&destination=Cafeter%C3%ADa%20Bellavista%20Conchal%C3%AD&destination_place_id=ChIJg8FfwujGYpYRFnbSevfOXRM" target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="btn btn-ghost" href="https://waze.com/ul?ll=-33.3779106,-70.6884507&navigate=yes" target="_blank" rel="noopener">Ir con Waze</a>
+        </div>
+      </div>
+
+      <div class="visit-map">
+        <!-- ⚠️ SIN loading="lazy": vive en pestaña display:none y no cargaría. -->
+        <iframe
+          title="Mapa de Cafetería Bellavista en Los Acacios 5481, Conchalí"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330!2d-70.6884507!3d-33.3779106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c6e8c25fc183%3A0x135dcef77ad27616!2sCafeter%C3%ADa%20Bellavista!5e0!3m2!1ses!2scl!4v1757900000000!5m2!1ses!2scl"
+          width="100%" height="100%" style="border:0" allowfullscreen=""
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- Flotantes. Derecha: sólo "volver arriba" — NO publican teléfono,
+     WhatsApp, Instagram ni Facebook, así que no hay ningún canal real al
+     que mandar a nadie. Izquierda vacía: tampoco tienen plataforma de
+     delivery. Es exactamente el vacío que la página viene a llenar. -->
+<div class="float float-right">
+  <button class="fab fab-top" id="toTop" data-label="Volver arriba" aria-label="Volver arriba"
+    style="background:var(--rojo);color:#fff"><span aria-hidden="true">↑</span></button>
+</div>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div>
+      <p class="foot-brand">Bellavista</p>
+      <p>Los Acacios 5481 · Conchalí</p>
+      <p data-horario-resumen>Lun a Vie 13:00 – 21:00 · Sáb cerrado · Dom 10:00 – 18:00</p>
+    </div>
+    <div class="foot-demo">
+      <p><strong>Esta es una demo.</strong> No es el sitio oficial de Cafetería Bellavista.</p>
+      <p>Hecha con datos públicos reales de su ficha de Google Maps
+         (verificados el 15-09-2026) para mostrarle al local cómo se vería
+         su página web.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.HORARIO = {
+  dias: ["13:00 - 21:00","13:00 - 21:00","13:00 - 21:00","13:00 - 21:00",
+         "13:00 - 21:00","Cerrado","10:00 - 18:00"],
+  fuente: "Ficha de Google Maps, 15-09-2026"
+};
+/* Sin window.REDES a propósito: no tienen ninguna red social publicada.
+   redes.js no hace nada si la variable no existe — que es lo correcto. */
+</script>
+
+<script src="script.js"></script>
+<script src="vida.js"></script>
+<script src="carta-fotos.js"></script>
+<script src="carrito.js"></script>
+<script src="horario.js"></script>
+<script src="redes.js"></script>
+</body>
+</html>
