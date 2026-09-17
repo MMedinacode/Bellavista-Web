@@ -24,6 +24,73 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Overpass:wght@300;400;500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="pulido.css">
+
+<!-- ══════════════════════════════════════════════════════════════
+     Datos estructurados (schema.org)
+     ══════════════════════════════════════════════════════════════
+     Esto no se ve en la página: lo lee Google. Le dice que acá hay
+     un negocio con nombre, dirección, teléfono y horario, en vez de
+     un texto cualquiera. Es lo que permite salir como ficha y no
+     sólo como un resultado más.
+
+     Todo lo de abajo ya está publicado en esta misma página. Si un
+     dato no estaba, el campo simplemente no aparece. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Cafetería Bellavista",
+  "description": "De salado a dulce: churrasco italiano, copas de helado, waffles y tortas. Con wifi, salón climatizado, terraza y estacionamiento.",
+  "image": "https://mmedinacode.github.io/Bellavista-Web/fotos/hero-churrasco-italiano.jpg",
+  "url": "https://mmedinacode.github.io/Bellavista-Web/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Los Acacios 5481",
+    "addressLocality": "Conchalí",
+    "addressRegion": "Región Metropolitana",
+    "addressCountry": "CL"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "13:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Tuesday",
+      "opens": "13:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Wednesday",
+      "opens": "13:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Thursday",
+      "opens": "13:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Friday",
+      "opens": "13:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "10:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -112,7 +179,7 @@
     <div class="tri reveal stagger">
       <article class="tri-card">
         <h3>Churrasco italiano</h3>
-        <p>Es el <strong>destacado nº1</strong> de su carta en Google. Y el
+        <p>Es el <strong>destacado nº1</strong> de la carta. Y el
            nº2 es el pisco sour: acá se viene a comer y a quedarse.</p>
         <a href="#carta" data-tab="carta" class="lnk">Ver la carta →</a>
       </article>
@@ -172,11 +239,9 @@
       <div class="split-txt">
         <h3>Y un lugar donde sentarse de verdad</h3>
         <p>
-          Una clienta lo enumeró mejor de lo que podríamos nosotros:
+          Una clienta lo enumeró mejor que nadie:
           <strong>“Muy muy amplio estacionamiento, zona wifi, salón
-          climatizado, también terraza”</strong>. Cuatro cosas que no
-          aparecen en su ficha de Google, y que son justo lo que uno quiere
-          saber antes de ir.
+          climatizado, también terraza”</strong>.
         </p>
         <p>
           Otro cliente lo resume en una línea: <em>“yo personalmente vengo
@@ -192,7 +257,7 @@
       <figure><img src="fotos/vitrina-tortas.jpg" alt="Vitrina con torta selva negra y mil hojas" loading="lazy" decoding="async"></figure>
       <figure><img src="fotos/chorrillana.jpg" alt="Chorrillana con huevo frito" loading="lazy" decoding="async"></figure>
     </div>
-    <p class="note">Todas las fotos son del propio local, de su ficha de Google Maps.</p>
+    
   </div>
 </section>
 
@@ -202,17 +267,10 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Carta</p>
       <h2>Lo que hay</h2>
-      <p class="sec-lead">
-        Productos reales, confirmados en su ficha y en sus propias fotos.
-      </p>
+      
     </header>
 
-    <div class="aviso reveal">
-      <strong>Sobre los precios:</strong> Bellavista no publica ninguno —
-      ni carta fotografiada, ni menú digital, ni redes. Así que acá todo va
-      sin precio, en vez de con uno inventado. <b>Es lo primero que ganaría
-      con una página.</b>
-    </div>
+    
 
     <section class="carta-bloque reveal">
       <header class="carta-bloque-head">
@@ -222,7 +280,7 @@
       <div class="menu reveal stagger">
         <article class="menu-item">
           <img src="fotos/hero-churrasco-italiano.jpg" alt="Churrasco italiano" loading="lazy" decoding="async">
-          <div><h4>Churrasco italiano</h4><p>El destacado nº1 de su carta en Google.</p></div>
+          <div><h4>Churrasco italiano</h4></div>
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/churrasco-tabla.jpg" alt="Sándwich en pan francés servido en tabla" loading="lazy" decoding="async">
@@ -230,7 +288,7 @@
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/chorrillana.jpg" alt="Chorrillana con huevo" loading="lazy" decoding="async">
-          <div><h4>Chorrillana</h4><p>Con huevo frito encima. Vista en sus propias fotos.</p></div>
+          <div><h4>Chorrillana</h4><p>Con huevo frito encima.</p></div>
           <span class="price">Consultar</span></article>
       </div>
     </section>
@@ -238,12 +296,12 @@
     <section class="carta-bloque reveal">
       <header class="carta-bloque-head">
         <h3>Heladería</h3>
-        <span class="carta-bloque-n">categoría propia en su ficha</span>
+        <span class="carta-bloque-n">3 opciones</span>
       </header>
       <div class="menu reveal stagger">
         <article class="menu-item">
           <img src="fotos/copa-helado.jpg" alt="Copa de helado con barquillos" loading="lazy" decoding="async">
-          <div><h4>Copas de helado</h4><p>Tres sabores, crema y barquillos. Google les da categoría de fotos propia.</p></div>
+          <div><h4>Copas de helado</h4><p>Tres sabores, crema y barquillos.</p></div>
           <span class="price">Consultar</span></article>
         <article class="menu-item">
           <img src="fotos/waffle.jpg" alt="Waffle con helado y M&M's" loading="lazy" decoding="async">
@@ -282,17 +340,13 @@
       <div class="menu reveal stagger">
         <article class="menu-item">
           <img src="fotos/malteadas-tazas.jpg" alt="Malteadas servidas en copa alta" loading="lazy" decoding="async">
-          <div><h4>Malteadas</h4><p>En copa alta. Salen en dos de sus fotos.</p></div>
+          <div><h4>Malteadas</h4><p>En copa alta.</p></div>
           <span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Café</h4><p>Servido en taza de loza turquesa, como se ve en sus fotos.</p></div><span class="price">Consultar</span></article>
-        <article class="menu-item"><div><h4>Pisco sour</h4><p>El destacado nº2 de su carta en Google.</p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Café</h4><p></p></div><span class="price">Consultar</span></article>
+        <article class="menu-item"><div><h4>Pisco sour</h4></div><span class="price">Consultar</span></article>
       </div>
     </section>
 
-    <p class="note">
-      Productos confirmados en su ficha de Google y en sus propias fotos.
-     
-    </p>
     <!--
       ⚠️ PLACEHOLDER MARCADO — NINGÚN PRECIO CONSTA.
       Bellavista no publica carta con valores en ninguna parte: ni impresa
@@ -308,7 +362,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Reseñas</p>
       <h2>4,6 ★ · 22 reseñas</h2>
-      <p class="sec-lead">Reales, copiadas tal cual de su ficha de Google Maps.</p>
+      <p class="sec-lead">Lo que dicen nuestros clientes en Google.</p>
     </header>
 
     <div class="revs reveal stagger">
@@ -344,7 +398,7 @@
     <header class="sec-head reveal">
       <p class="eyebrow">Redes</p>
       <h2>Dónde encontrarnos</h2>
-      <p class="sec-lead">Sólo lo verificado. Ningún perfil inventado.</p>
+      <p class="sec-lead">Todos nuestros canales, en un solo lugar.</p>
     </header>
 
     <div class="redes">
@@ -363,7 +417,7 @@
           <figure><img src="fotos/waffle.jpg" alt="Waffle con M&M's" loading="lazy" decoding="async"></figure>
           <figure><img src="fotos/galletas.jpg" alt="Galletas grandes" loading="lazy" decoding="async"></figure>
         </a>
-        <p class="red-pie">Hoy es su <b>único canal en internet</b>.</p>
+        
       </article>
 
       <!--
@@ -374,17 +428,8 @@
         pendiente en el dossier. NO se inventa ningún perfil.
       -->
       <article class="red-card red-card-falta reveal">
-        <div class="red-card-head red-card-head-off">
-          <span class="red-logo red-logo-off" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M11 7h2v6h-2V7zm0 8h2v2h-2v-2zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg></span>
-          <span class="red-card-txt">
-            <b>Sin teléfono ni redes</b>
-            <em>Nada publicado en su ficha</em>
-          </span>
-        </div>
-        <p class="red-pie">
-          Declaran <b>entrega a domicilio</b>, pero no dicen por dónde se
-          pide. Un número en la ficha resolvería las dos cosas.
-        </p>
+        
+        <p class="red-pie">Hacen entrega a domicilio.</p>
       </article>
     </div>
 
@@ -422,8 +467,7 @@
           </ul>
           <p class="sub">
             <b>El domingo es el único día que abrimos en la mañana</b>, y el
-            sábado es el único que cerramos. Según su ficha de Google,
-            consultada el 15-09-2026.
+            sábado es el único que cerramos.
           </p>
         </div>
 
@@ -435,11 +479,7 @@
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l9 7h-2v11h-5v-6h-4v6H5V9H3l9-7z"/></svg> Terraza</li>
             <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v9H3V6zm12 3h3.5L21 12.5V15h-6V9zM6.5 20a2 2 0 110-4 2 2 0 010 4zm11 0a2 2 0 110-4 2 2 0 010 4z"/></svg> Entrega a domicilio</li>
           </ul>
-          <p class="sub">
-            Las tres primeras las enumera una clienta en su reseña de
-            Google. La entrega a domicilio la declara su ficha — aunque
-            <b>no publican teléfono</b> para pedirla.
-          </p>
+          
         </div>
 
         <div class="vblock vblock-cta">
@@ -504,5 +544,6 @@ window.HORARIO = {
 <script src="horario.js"></script>
 <script src="redes.js"></script>
 <script src="flotantes.js"></script>
+<script src="pulido.js"></script>
 </body>
 </html>
